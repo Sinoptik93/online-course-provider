@@ -1,0 +1,19 @@
+{
+  "name": "online-course-provider",
+  "version": "0.0.1",
+  "description": "Online course provider",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sinoptik93/online-course-provider.git"
+  },
+  "author": "Sergey Chepukhin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sinoptik93/online-course-provider/issues"
+  },
+  "homepage": "https://github.com/Sinoptik93/online-course-provider#readme"
+}
