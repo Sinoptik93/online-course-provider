@@ -1,7 +1,7 @@
 import path from 'path';
-import webpack from "webpack";
+import { Configuration } from "webpack";
 import { buildWebpackConfig } from "./config/build/buildWebpackConfig";
-import { BUILD_MODE_VARIANTS, BuildPaths } from "./config/build/types/config";
+import { BUILD_MODE_VARIANTS, BuildPaths, BuildMode } from "./config/build/types/config";
 
 const paths: BuildPaths = {
   entry: path.resolve(__dirname, 'src', 'index.ts'),
@@ -9,13 +9,26 @@ const paths: BuildPaths = {
   html: path.resolve(__dirname, 'public', 'index.html')
 }
 
-const mode = BUILD_MODE_VARIANTS.DEVELOPMENT;
-const isDev = mode === BUILD_MODE_VARIANTS.DEVELOPMENT;
 
-const webpackConfig: webpack.Configuration = buildWebpackConfig({
-  mode: BUILD_MODE_VARIANTS.DEVELOPMENT,
-  paths,
-  isDev,
-})
+/**
+ * [Source](https://webpack.js.org/guides/environment-variables/)
+ */
+interface BuildEnv {
+  mode: BuildMode;
+  port: number;
+}
 
-export default webpackConfig;
+export default (env: BuildEnv): Configuration => {
+
+  const MODE = env.mode ?? BUILD_MODE_VARIANTS.DEVELOPMENT;
+  const PORT = env.port ?? 3000;
+
+  const isDev = MODE === BUILD_MODE_VARIANTS.DEVELOPMENT;
+
+  return buildWebpackConfig({
+    mode: MODE,
+    port: PORT,
+    isDev,
+    paths,
+  })
+}
