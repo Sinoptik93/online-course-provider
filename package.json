@@ -1,6 +1,6 @@
 {
   "name": "online-course-provider",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Online course provider",
   "scripts": {
     "test": "test",
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/Sinoptik93/online-course-provider#readme",
   "devDependencies": {
-    "@types/node": "^18.11.18",
+    "@types/node": "^18.13.0",
     "@types/webpack": "^5.28.0",
     "@types/webpack-dev-server": "^4.7.2",
     "html-webpack-plugin": "^5.5.0",
