@@ -1,10 +1,11 @@
-import webpack from "webpack";
+import { Configuration } from "webpack";
 import { BuildOptions } from "./types/config";
 import { buildPlugins } from "./buildPlugins";
 import { buildLoaders } from "./buildLoaders";
+import { buildDevServer } from "./buildDevServer";
 
-export function buildWebpackConfig (options: BuildOptions): webpack.Configuration {
-  const {mode, paths} = options;
+export function buildWebpackConfig (options: BuildOptions): Configuration {
+  const {mode, paths, isDev} = options;
 
   return  {
     mode,
@@ -23,6 +24,11 @@ export function buildWebpackConfig (options: BuildOptions): webpack.Configuratio
 
     resolve: {
       extensions: ['.js', '.ts', '.tsx']
-    }
+    },
+
+     // [Devtool source](https://webpack.js.org/configuration/devtool/)
+    devtool: isDev ? "eval-source-map" : undefined,
+
+    devServer: isDev ? buildDevServer(options) : undefined,
   }
 }
