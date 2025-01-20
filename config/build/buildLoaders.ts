@@ -14,7 +14,7 @@ export function buildLoaders(): WebpackRule[] {
    * [ts-loader guide](https://webpack.js.org/guides/typescript/#loader)
    */
   const typeScriptLoader: WebpackRule = {
-    test: '/\.tsx?$/',
+    test: /\.tsx?$/,
     use: 'ts-loader',
     exclude: '/node_modules/',
   }

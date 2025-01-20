@@ -34,3 +34,11 @@ export interface BuildOptions {
   isDev: boolean;
   port: number | string;
 }
+
+/**
+ * [Source](https://webpack.js.org/guides/environment-variables/)
+ */
+export interface BuildEnv {
+  mode: BuildMode;
+  port: number;
+}

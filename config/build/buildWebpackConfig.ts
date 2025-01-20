@@ -3,6 +3,7 @@ import { BuildOptions } from "./types/config";
 import { buildPlugins } from "./buildPlugins";
 import { buildLoaders } from "./buildLoaders";
 import { buildDevServer } from "./buildDevServer";
+import {buildResolvers} from "./buildResolvers";
 
 export function buildWebpackConfig (options: BuildOptions): Configuration {
   const {mode, paths, isDev} = options;
@@ -22,9 +23,7 @@ export function buildWebpackConfig (options: BuildOptions): Configuration {
       rules: buildLoaders()
     },
 
-    resolve: {
-      extensions: ['.js', '.ts', '.tsx']
-    },
+    resolve: buildResolvers(),
 
      // [Devtool source](https://webpack.js.org/configuration/devtool/)
     devtool: isDev ? "eval-source-map" : undefined,
