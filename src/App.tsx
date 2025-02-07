@@ -4,13 +4,14 @@ import {MainPageAsync} from "./pages/MainPage/MainPage.lazy";
 import {AboutPageAsync} from "./pages/AboutPage/AboutPage.lazy";
 import {Suspense} from "react";
 import useTheme from "./theme/useTheme";
+import {classNames} from "./helpers/classNames/classNames";
 
 
 export const App = () => {
     const {theme, toggleTheme} = useTheme()
 
     return (
-        <div className={`app ${theme}`}>
+        <div className={classNames("app", {}, [theme])}>
             <Link to="/">Главная</Link>
             <Link to="/about">О сайте</Link>
             <button onClick={toggleTheme}>Toggle theme</button>
