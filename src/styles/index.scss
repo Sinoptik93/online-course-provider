@@ -1,0 +1,12 @@
+@use "reset";
+@use "themes";
+@use "variables";
+
+.app {
+  font: var(--font-m);
+
+  background-color: var(--bg-color);
+  color: var(--color-primary);
+
+  min-height: 100vh;
+}
