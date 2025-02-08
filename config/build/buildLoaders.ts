@@ -11,6 +11,7 @@ type WebpackRule = webpack.RuleSetRule;
  */
 export function buildLoaders(options: BuildOptions): WebpackRule[] {
 
+    // noinspection JSUnusedGlobalSymbols
     /**
      * [Loader options](https://github.com/webpack-contrib/sass-loader?tab=readme-ov-file#sassoptions)
      * [sass guide](https://webpack.js.org/loaders/sass-loader/)
