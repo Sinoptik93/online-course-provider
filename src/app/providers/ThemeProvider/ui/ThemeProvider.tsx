@@ -1,5 +1,5 @@
 import {ReactNode, useMemo, useState} from "react";
-import {defaultTheme, Theme, ThemeContext} from "./ThemeContext";
+import {defaultTheme, Theme, ThemeContext} from "shared/config/theme";
 
 
 const ThemeProvider = ({children}: { children: ReactNode }) => {
@@ -14,4 +14,4 @@ const ThemeProvider = ({children}: { children: ReactNode }) => {
     );
 };
 
-export default ThemeProvider;
+export {ThemeProvider};
