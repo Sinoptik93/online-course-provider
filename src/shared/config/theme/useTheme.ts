@@ -23,4 +23,4 @@ const useTheme = (): UseThemeResult => {
     }
 }
 
-export default useTheme;
+export {useTheme};

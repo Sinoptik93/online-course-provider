@@ -26,6 +26,14 @@ export interface BuildPaths {
    * [Config HTMLWebpack plugin](https://webpack.js.org/plugins/html-webpack-plugin/#basic-usage)
    */
   html: string;
+
+
+  /**
+   * Module resolution
+   *
+   * [Example absolute paths usage](https://webpack.js.org/concepts/module-resolution/)
+   */
+  src: string;
 }
 
 export interface BuildOptions {
