@@ -3,7 +3,7 @@ export enum AppRoutes {
     ABOUT = "about"
 }
 
-export const RoutePaths: Record<AppRoutes, string> = {
+export const routePaths: Record<AppRoutes, string> = {
     [AppRoutes.MAIN]: "/",
     [AppRoutes.ABOUT]: "/about"
 }

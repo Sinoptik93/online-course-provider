@@ -1,3 +1,5 @@
+// noinspection JSUnusedGlobalSymbols
+
 import path from 'path';
 import { Configuration } from "webpack";
 import { buildWebpackConfig } from "./config/build/buildWebpackConfig";
