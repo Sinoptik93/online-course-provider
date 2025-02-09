@@ -1,10 +1,10 @@
-import {useTheme} from "shared/config/theme";
+import {ThemeSwitcher} from "widget/ThemeSwitcher";
 import {routePaths} from "shared/config/route";
 import {AppLink} from "shared/ui/AppLink";
 import {classNames as cls} from "shared/lib/classNames";
+import {AppLinkTheme} from "shared/ui/AppLink";
 
 import styles from "./Navbar.module.scss";
-import {AppLinkTheme} from "shared/ui/AppLink/ui/AppLink";
 
 
 interface NavbarProps {
@@ -12,7 +12,7 @@ interface NavbarProps {
 }
 
 const Navbar = ({classNames}: NavbarProps) => {
-    const {toggleTheme} = useTheme();
+
 
     return (
         <div className={cls(styles.navbar, {}, [classNames])}>
@@ -33,7 +33,7 @@ const Navbar = ({classNames}: NavbarProps) => {
                     </AppLink>
                 </div>
 
-                <button onClick={toggleTheme}>Toggle theme</button>
+                <ThemeSwitcher/>
             </div>
         </div>
     );
