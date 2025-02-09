@@ -11,10 +11,36 @@ type WebpackRule = webpack.RuleSetRule;
  */
 export function buildLoaders(options: BuildOptions): WebpackRule[] {
 
+    /**
+     * File loader
+     *
+     * [Loader options](https://v4.webpack.js.org/loaders/file-loader/#options)
+     */
+    const fileLoader: WebpackRule = {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+            {
+                loader: 'file-loader',
+            },
+        ],
+    };
+
+    /**
+     * SVGR loader
+     *
+     * [Doc](https://www.npmjs.com/package/@svgr/webpack)
+     */
+    const svgLoader: WebpackRule = {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+    }
+
     // noinspection JSUnusedGlobalSymbols
     /**
      * [Loader options](https://github.com/webpack-contrib/sass-loader?tab=readme-ov-file#sassoptions)
+     *
      * [sass guide](https://webpack.js.org/loaders/sass-loader/)
+     *
      * [mini-css guide](https://webpack.js.org/plugins/mini-css-extract-plugin/#root)
      */
     const cssLoader: WebpackRule = {
@@ -41,6 +67,7 @@ export function buildLoaders(options: BuildOptions): WebpackRule[] {
 
     /**
      * [Loader options](https://github.com/TypeStrong/ts-loader#loader-options)
+     *
      * [ts-loader guide](https://webpack.js.org/guides/typescript/#loader)
      */
     const typeScriptLoader: WebpackRule = {
@@ -51,6 +78,8 @@ export function buildLoaders(options: BuildOptions): WebpackRule[] {
 
     return [
         typeScriptLoader,
-        cssLoader
+        cssLoader,
+        svgLoader,
+        fileLoader,
     ]
 }
