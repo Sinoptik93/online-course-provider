@@ -1,19 +1,15 @@
-import {ThemeSwitcher} from "widget/ThemeSwitcher";
-import {routePaths} from "shared/config/route";
-import {AppLink} from "shared/ui/AppLink";
-import {classNames as cls} from "shared/lib/classNames";
-import {AppLinkTheme} from "shared/ui/AppLink";
+import { routePaths } from 'shared/config/route';
+import { AppLink } from 'shared/ui/AppLink';
+import { classNames as cls } from 'shared/lib/classNames';
+import { AppLinkTheme } from 'shared/ui/AppLink';
 
-import styles from "./Navbar.module.scss";
-
+import styles from './Navbar.module.scss';
 
 interface NavbarProps {
-    classNames?: string;
+    'classNames'?: string;
 }
 
-const Navbar = ({classNames}: NavbarProps) => {
-
-
+const Navbar = ({ classNames }: NavbarProps) => {
     return (
         <div className={cls(styles.navbar, {}, [classNames])}>
             <div className={styles.controls}>
@@ -33,10 +29,9 @@ const Navbar = ({classNames}: NavbarProps) => {
                     </AppLink>
                 </div>
 
-                <ThemeSwitcher/>
             </div>
         </div>
     );
 };
 
-export {Navbar};
+export { Navbar };
