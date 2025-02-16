@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Sinoptik93/online-course-provider#readme",
   "devDependencies": {
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^22.10.7",
     "@types/react": "^19.0.7",
@@ -27,6 +28,7 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.6.3",
     "mini-css-extract-plugin": "^2.9.2",
+    "react-refresh": "^0.16.0",
     "sass": "^1.84.0",
     "sass-loader": "^16.0.4",
     "ts-loader": "^9.5.2",
