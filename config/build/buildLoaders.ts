@@ -64,7 +64,6 @@ export function buildLoaders(options: BuildOptions): WebpackRule[] {
         ],
     }
 
-
     /**
      * [Loader options](https://github.com/TypeStrong/ts-loader#loader-options)
      *
@@ -76,7 +75,22 @@ export function buildLoaders(options: BuildOptions): WebpackRule[] {
         exclude: '/node_modules/',
     }
 
+    /**
+     * [Babel loader](https://babeljs.io/setup)
+     */
+    const babelLoader: WebpackRule = {
+        test: /\.{js|jsx|ts|tsx}$/,
+        exclude: /node_modules/,
+        use: {
+            loader: "babel-loader",
+            options: {
+                presets: ['@babel/preset-env'],
+            }
+        }
+    }
+
     return [
+        babelLoader,
         typeScriptLoader,
         cssLoader,
         svgLoader,
