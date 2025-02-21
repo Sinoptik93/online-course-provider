@@ -1,2 +1,2 @@
-export {AppLink} from "./ui/AppLink";
-export {AppLinkTheme} from "./types"
+export { AppLink } from './ui/AppLink';
+export { AppLinkTheme } from './types';

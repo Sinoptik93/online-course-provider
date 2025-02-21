@@ -1,10 +1,8 @@
-import {Link, LinkProps} from "react-router-dom";
-import {classNames as cls} from "shared/lib/classNames";
-import {AppLinkTheme} from "../types"
+import { Link, LinkProps } from 'react-router-dom';
+import { classNames as cls } from 'shared/lib/classNames';
+import { AppLinkTheme } from '../types';
 
-import styles from "./AppLink.module.scss";
-
-
+import styles from './AppLink.module.scss';
 
 interface AppLinkProps extends LinkProps {
     classNames?: string;
@@ -31,4 +29,4 @@ const AppLink = (props: AppLinkProps) => {
     );
 };
 
-export {AppLink};
+export { AppLink };

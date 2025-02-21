@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { ThemeSwitcher } from 'widget/ThemeSwitcher';
-import {LangSwitcher} from "widget/LangSwitcher";
+import { LangSwitcher } from 'widget/LangSwitcher';
 import { classNames as cls } from 'shared/lib/classNames';
 
 import styles from './Sidebar.module.scss';
 
 interface SidebarProps {
-    'classNames'?: string;
+    classNames?: string;
 }
 
 const Sidebar = ({ classNames }: SidebarProps) => {
@@ -22,7 +22,7 @@ const Sidebar = ({ classNames }: SidebarProps) => {
 
             <div className={styles.switchers}>
                 <ThemeSwitcher />
-                <LangSwitcher classNames={styles.lang}/>
+                <LangSwitcher classNames={styles.lang} />
             </div>
         </div>
     );

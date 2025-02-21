@@ -1,11 +1,10 @@
-import {ReactNode, useMemo, useState} from "react";
-import {defaultTheme, Theme, ThemeContext} from "shared/config/theme";
+import { ReactNode, useMemo, useState } from 'react';
+import { defaultTheme, Theme, ThemeContext } from 'shared/config/theme';
 
-
-const ThemeProvider = ({children}: { children: ReactNode }) => {
+const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const [theme, setTheme] = useState<Theme>(defaultTheme);
 
-    const defaultProps = useMemo(() => ({theme, setTheme}), [theme])
+    const defaultProps = useMemo(() => ({ theme, setTheme }), [theme]);
 
     return (
         <ThemeContext.Provider value={defaultProps}>
@@ -14,4 +13,4 @@ const ThemeProvider = ({children}: { children: ReactNode }) => {
     );
 };
 
-export {ThemeProvider};
+export { ThemeProvider };

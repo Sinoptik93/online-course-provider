@@ -7,7 +7,7 @@ import IconThemeDark from 'shared/assets/icons/icon-theme-dark.svg';
 import styles from './ThemeSwitcher.module.scss';
 
 interface ThemeSwitcherProps {
-    'classNames'?: string;
+    classNames?: string;
 }
 
 const ThemeSwitcher = ({ classNames }: ThemeSwitcherProps) => {
