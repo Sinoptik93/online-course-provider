@@ -2,6 +2,7 @@ import globals from 'globals';
 import pluginJs from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import pluginReact from 'eslint-plugin-react';
+import i18next from 'eslint-plugin-i18next';
 import stylistic from '@stylistic/eslint-plugin';
 
 export default tseslint.config(
@@ -23,7 +24,6 @@ export default tseslint.config(
             '.vscode/*',
         ],
     },
-
     {
         name: 'typescript/base',
         files: ['**/*.{ts,tsx}'],
@@ -37,7 +37,6 @@ export default tseslint.config(
             },
         },
     },
-
     {
         name: 'react/base',
         files: ['**/*.tsx'],
@@ -53,7 +52,10 @@ export default tseslint.config(
             'react/react-in-jsx-scope': 'off',
         },
     },
-
+    {
+        name: 'i18n/base',
+        ...i18next.configs['flat/recommended'],
+    },
     {
         name: 'stylistic/base',
         ...stylistic.configs.customize({

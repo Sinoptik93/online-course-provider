@@ -1,5 +1,6 @@
 {
     "button": {
-        "translate": "Switch language"
+        "translate": "Switch language",
+        "toggle": "toggle"
     }
 }
