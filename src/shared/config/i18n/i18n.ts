@@ -14,12 +14,11 @@ i18n
     .init({
         fallbackLng: 'en',
         debug: __IS_DEV,
-        ns: ["common", "main", "about"],
+        ns: ['common', 'main', 'about'],
 
         interpolation: {
             escapeValue: false,
         },
     });
-
 
 export default i18n;

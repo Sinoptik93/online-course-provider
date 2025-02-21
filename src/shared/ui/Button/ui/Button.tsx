@@ -1,8 +1,8 @@
-import {ButtonHTMLAttributes} from "react";
-import {classNames as cls} from "shared/lib/classNames";
-import {ThemeButton} from "../types";
+import { ButtonHTMLAttributes } from 'react';
+import { classNames as cls } from 'shared/lib/classNames';
+import { ThemeButton } from '../types';
 
-import styles from "./Button.module.scss";
+import styles from './Button.module.scss';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     classNames?: string;
@@ -27,4 +27,4 @@ const Button = (props: ButtonProps) => {
     );
 };
 
-export {Button};
+export { Button };

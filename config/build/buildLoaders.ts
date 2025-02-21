@@ -1,6 +1,6 @@
-import webpack from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import {BuildOptions} from "./types/config";
+import webpack from 'webpack';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { BuildOptions } from './types/config';
 
 type WebpackRule = webpack.RuleSetRule;
 
@@ -10,7 +10,6 @@ type WebpackRule = webpack.RuleSetRule;
  * [Loaders examples](https://webpack.js.org/loaders/#root)
  */
 export function buildLoaders(options: BuildOptions): WebpackRule[] {
-
     /**
      * File loader
      *
@@ -33,7 +32,7 @@ export function buildLoaders(options: BuildOptions): WebpackRule[] {
     const svgLoader: WebpackRule = {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
-    }
+    };
 
     // noinspection JSUnusedGlobalSymbols
     /**
@@ -46,23 +45,23 @@ export function buildLoaders(options: BuildOptions): WebpackRule[] {
     const cssLoader: WebpackRule = {
         test: /\.s[ac]ss$/i,
         use: [
-            options.isDev ? "style-loader" : MiniCssExtractPlugin.loader,
+            options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
             {
-                loader: "css-loader",
+                loader: 'css-loader',
                 options: {
                     modules: {
                         namedExport: false,
-                        auto: (resPath: string) => Boolean(resPath.includes(".module.")),
+                        auto: (resPath: string) => Boolean(resPath.includes('.module.')),
                         localIdentName:
                             options.isDev
-                                ? "[path][name]__[local]--[hash:base64:5]"
-                                : "[hash:base64:8]"
-                    }
-                }
+                                ? '[path][name]__[local]--[hash:base64:5]'
+                                : '[hash:base64:8]',
+                    },
+                },
             },
-            "sass-loader",
+            'sass-loader',
         ],
-    }
+    };
 
     /**
      * [Loader options](https://github.com/TypeStrong/ts-loader#loader-options)
@@ -73,7 +72,7 @@ export function buildLoaders(options: BuildOptions): WebpackRule[] {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: '/node_modules/',
-    }
+    };
 
     /**
      * [Babel loader](https://babeljs.io/setup)
@@ -82,12 +81,12 @@ export function buildLoaders(options: BuildOptions): WebpackRule[] {
         test: /\.{js|jsx|ts|tsx}$/,
         exclude: /node_modules/,
         use: {
-            loader: "babel-loader",
+            loader: 'babel-loader',
             options: {
                 presets: ['@babel/preset-env'],
-            }
-        }
-    }
+            },
+        },
+    };
 
     return [
         babelLoader,
@@ -95,5 +94,5 @@ export function buildLoaders(options: BuildOptions): WebpackRule[] {
         cssLoader,
         svgLoader,
         fileLoader,
-    ]
+    ];
 }

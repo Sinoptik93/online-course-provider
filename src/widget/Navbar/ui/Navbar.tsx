@@ -4,14 +4,14 @@ import { classNames as cls } from 'shared/lib/classNames';
 import { AppLinkTheme } from 'shared/ui/AppLink';
 
 import styles from './Navbar.module.scss';
-import {useTranslation} from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 interface NavbarProps {
-    'classNames'?: string;
+    classNames?: string;
 }
 
 const Navbar = ({ classNames }: NavbarProps) => {
-    const {t} = useTranslation()
+    const { t } = useTranslation();
 
     return (
         <div className={cls(styles.navbar, {}, [classNames])}>
