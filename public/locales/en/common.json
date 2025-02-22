@@ -1,6 +1,9 @@
 {
     "button": {
-        "translate": "Switch language",
-        "toggle": "toggle"
+        "toggle": "toggle",
+        "translate": "Switch language"
+    },
+    "notFound": {
+        "title": "Page not found"
     }
 }

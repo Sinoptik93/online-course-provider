@@ -1,24 +1,26 @@
 .navbar {
+  display: flex;
+
+  align-items: center;
+
   width: 100%;
   height: var(--navbar-height);
 
-  display: flex;
-  align-items: center;
-
   padding: 20px;
 
-  background: var(--bg-color-inverted);
+  background: var(--bg-color--inverted);
 }
 
 .controls {
-  margin-left: auto;
-
   display: flex;
+
+  margin-left: auto;
 }
 
 .links {
-  margin-right: 8px;
-
   display: flex;
+
   gap: 1rem;
+
+  margin-right: 8px;
 }
