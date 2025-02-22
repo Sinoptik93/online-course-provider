@@ -9,6 +9,7 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "lint:styles": "npx stylelint \"**/*.scss\"",
+    "lint:styles:fix": "npx stylelint \"**/*.scss\" --fix",
     "unit": "jest --config ./config/jest/jest.config.ts"
   },
   "repository": {
@@ -49,7 +50,9 @@
     "sass": "^1.84.0",
     "sass-loader": "^16.0.4",
     "stylelint": "^16.14.1",
+    "stylelint-config-recess-order": "^6.0.0",
     "stylelint-config-standard-scss": "^14.0.0",
+    "stylelint-order": "^6.0.4",
     "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3",
@@ -67,7 +70,6 @@
     "react-dom": "^19.0.0",
     "react-i18next": "^15.4.0",
     "react-router-dom": "^7.1.5",
-    "style-loader": "^4.0.0",
-    "stylelint-scss": "^6.11.0"
+    "style-loader": "^4.0.0"
   }
 }

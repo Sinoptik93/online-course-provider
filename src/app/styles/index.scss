@@ -3,10 +3,13 @@
 @use "variables";
 
 .app {
-  font: var(--font-m);
-  background-color: var(--bg-color);
-  color: var(--color-primary);
   min-height: 100vh;
+
+  font: var(--font-m);
+
+  color: var(--color-primary);
+
+  background-color: var(--bg-color);
 }
 
 .content-page {
@@ -15,5 +18,6 @@
 
 .page-wrapper {
   flex-grow: 1;
+
   padding: 20px;
 }
