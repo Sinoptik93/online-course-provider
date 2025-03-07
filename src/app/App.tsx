@@ -1,4 +1,4 @@
-import { AppRouter } from 'app/providers/router';
+import { AppRouter } from './providers/router';
 import { Navbar } from 'widget/Navbar';
 import { Sidebar } from 'widget/Sidebar';
 import { useTheme } from 'shared/config/theme';
