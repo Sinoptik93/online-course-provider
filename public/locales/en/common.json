@@ -3,7 +3,11 @@
         "toggle": "toggle",
         "translate": "Switch language"
     },
+    "error": {
+        "unexpected": "Unexpected error"
+    },
     "notFound": {
         "title": "Page not found"
-    }
+    },
+    "reloadPage": "Reload page"
 }
